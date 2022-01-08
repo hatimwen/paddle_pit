@@ -38,6 +38,7 @@ _C.DATA.CROP_PCT = 0.9 # input image scale ratio, scale is applied before center
 _C.DATA.NUM_WORKERS = 8 # number of data loading threads
 _C.DATA.IMAGENET_MEAN = [0.485, 0.456, 0.406] # [0.5, 0.5, 0.5]
 _C.DATA.IMAGENET_STD = [0.229, 0.224, 0.225] # [0.5, 0.5, 0.5]
+_C.DATA.IMG_PATH = None
 
 # model settings
 _C.MODEL = CN()
@@ -171,6 +172,8 @@ def update_config(config, args):
         config.DATA.IMAGE_SIZE = args.image_size
     if args.data_path:
         config.DATA.DATA_PATH = args.data_path
+    if args.img_path:
+        config.DATA.IMG_PATH = args.img_path
     if args.save_path:
         config.SAVE = args.save_path
     if args.ngpus:

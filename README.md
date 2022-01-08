@@ -109,6 +109,27 @@ sh scripts/run_train_multi.sh
 sh scripts/run_train.sh
 ```
 
+### 第五步：验证预测
+
+```
+python predict.py \
+-pretrained='output/Best_PiT' \
+-img_path='images/ILSVRC2012_val_00004506.JPEG'
+```
+
+<p align="center">
+<img src="./images/ILSVRC2012_val_00004506.JPEG"/>
+    <h4 align="center">验证图片（类别：藏獒， id: 244）</h4>
+</p>
+
+输出结果为:
+
+```
+class_id: 244, prob: 9.12291145324707
+```
+
+对照ImageNet类别id（[ImageNet数据集编号对应的类别内容](https://blog.csdn.net/winycg/article/details/101722445)），可知`244`为藏獒，预测结果正确。
+
 ## 5.代码结构
 
 ```

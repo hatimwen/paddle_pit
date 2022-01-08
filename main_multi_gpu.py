@@ -60,6 +60,7 @@ def get_arguments():
     parser.add_argument('-teacher_model', type=str, default=None)
     parser.add_argument('-eval', action='store_true')
     parser.add_argument('-amp', action='store_true')
+    parser.add_argument('-img_path', type=str, default=None)
     arguments = parser.parse_args()
     return arguments
 
