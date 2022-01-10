@@ -2,6 +2,7 @@ import os
 from PIL import Image
 import argparse
 import paddle
+import paddle.nn.functional as F
 
 from config import get_config
 from config import update_config
@@ -56,7 +57,7 @@ def main(config):
     img = eval_transforms(img)
     img = img.expand([1] + img.shape)
 
-    output = model(img).numpy()[0]
+    output = F.softmax(model(img)).numpy()[0]
 
     class_id = output.argmax()
     prob = output[class_id]
