@@ -23,11 +23,29 @@
 
 本项目使用的为官方推荐的图片压缩过的更轻量的Light_ILSVRC2012，数据集大小为65GB。其在AI Studio上的地址为：[Light_ILSVRC2012_part_0.tar](https://aistudio.baidu.com/aistudio/datasetdetail/114241) 与 [Light_ILSVRC2012_part_1.tar](https://aistudio.baidu.com/aistudio/datasetdetail/114746)。
 
+数据集结构（可以参照[这个脚本](https://gist.github.com/BIGBALLON/8a71d225eff18d88e469e6ea9b39cef4)下载并整理数据集）：
+
+```
+│imagenet/
+├──train/
+│  ├── n01440764
+│  │   ├── n01440764_10026.JPEG
+│  │   ├── n01440764_10027.JPEG
+│  │   ├── ......
+│  ├── ......
+├──val/
+│  ├── n01440764
+│  │   ├── ILSVRC2012_val_00000293.JPEG
+│  │   ├── ILSVRC2012_val_00002138.JPEG
+│  │   ├── ......
+│  ├── ......
+```
+
 ### 复现精度
 
-|  Model   |  目标精度Acc@1|  实现精度Acc@1|Image Size   | batch_size | Crop_pct   | epoch  |#Params|
-|  ----    |  ----      |  ----     |  ----       | ----       | ----       | ----   | ----  |
-| pit_ti  |  73.0       |  **73.01**     |224          |256*4GPUs         |0.9         | 300 <br> (+10 COOLDOWN) |4.8M|
+|  Model   |  目标精度Acc@1|  实现精度Acc@1|Image Size   | batch_size | Crop_pct   | epoch  |
+|  ----    |  ----      |  ----     |  ----       | ----       | ----       | ----  |
+| pit_ti  |  73.0       |  **72.97**     |224          |256*4GPUs         |0.9         | 300 <br> (+10 COOLDOWN)|
 
 > 【注】上表中的实现精度在原版ILSVRC2012验证集上测试得到。
 值得一提的是，本项目在Light_ILSVRC2012的验证集上的Validation Acc@1达到了**73.17**。
@@ -125,7 +143,7 @@ python predict.py \
 输出结果为:
 
 ```
-class_id: 244, prob: 9.12291145324707
+class_id: 244, prob: 0.8468140959739685
 ```
 
 对照ImageNet类别id（[ImageNet数据集编号对应的类别内容](https://blog.csdn.net/winycg/article/details/101722445)），可知`244`为藏獒，预测结果正确。
