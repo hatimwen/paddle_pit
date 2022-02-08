@@ -83,7 +83,7 @@
 
 - 硬件：Tesla V100 * 4（由衷感谢百度飞桨平台提供高性能算力支持）
 
-- [PaddlePaddle](https://www.paddlepaddle.org.cn/documentation/docs/en/install/index_en.html)==2.2.1
+- [PaddlePaddle](https://www.paddlepaddle.org.cn/documentation/docs/en/install/index_en.html)==2.2.2
 - Python==3.7
 
 ## 4. 快速开始
