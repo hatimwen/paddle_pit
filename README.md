@@ -4,6 +4,8 @@
 
 - 本项目基于 [PaddleViT](https://github.com/BR-IDL/PaddleViT.git) 实现，在其基础上与原版代码实现了更进一步的对齐，并通过完整训练与测试完成对pit_ti模型的复现.
 
+[English](./README_en.md) | 简体中文
+
 ## 1. 简介
 
 从CNN的成功设计原理出发，作者研究了空间尺寸转换的作用及其在基于Transformer的体系结构上的有效性。
