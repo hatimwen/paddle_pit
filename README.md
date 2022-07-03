@@ -182,14 +182,12 @@ class_id: 244, prob: 0.8468140959739685
 
 ## 6. 参考及引用
 
-```
-@InProceedings{Yuan_2021_ICCV,
-    author    = {Yuan, Li and Chen, Yunpeng and Wang, Tao and Yu, Weihao and Shi, Yujun and Jiang, Zi-Hang and Tay, Francis E.H. and Feng, Jiashi and Yan, Shuicheng},
-    title     = {Tokens-to-Token ViT: Training Vision Transformers From Scratch on ImageNet},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {558-567}
+```BibTeX
+@inproceedings{heo2021pit,
+    title={Rethinking Spatial Dimensions of Vision Transformers},
+    author={Byeongho Heo and Sangdoo Yun and Dongyoon Han and Sanghyuk Chun and Junsuk Choe and Seong Joon Oh},
+    booktitle = {International Conference on Computer Vision (ICCV)},
+    year={2021},
 }
 ```
 
